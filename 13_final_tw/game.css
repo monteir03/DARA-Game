@@ -1,0 +1,144 @@
+#board {
+    width: 75*5px; /* Adjust the width as needed */
+    height: 75*6px; /* Adjust the height as needed */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
+    grid-template-rows: repeat(6, 1fr); /* 6 rows with equal height */
+    border: 8px solid rgb(74, 51, 29); 
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(179, 156, 136); 
+    margin-bottom: 5px;
+    margin-top: -150px;
+}
+
+#info{
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 2px; /* Cantos arredondados */
+    color: rgb(255, 0, 0);
+    background-color: rgb(179, 156, 136);
+
+    text-align: center; /* Centraliza o conteudo horizontalmente */
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente o conteudo dentro da div pai */
+    align-items: center; /* Centraliza verticalmente o conteudo */
+
+    margin-top: 530px; /* Ajuste a margem conforme necessario */
+    margin-left: 0px;
+    position: absolute;
+}
+
+#warning{
+    display:flex;
+    font-size:22px;
+    font-weight: bolder;
+    color:rgb(255, 0, 0);
+    margin-bottom: 700px;
+    height: 40px;
+    position: absolute;
+    width: 360px;
+    padding-left: 10px;
+    padding-top: 3px;
+    background-color: rgb(179, 156, 136);
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(74, 51, 29); 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:solid rgb(74, 51, 29);
+}
+
+/* pecas */
+.black{
+    height: 75px;
+    width: 75px;
+    border-radius: 60%;
+    border: 3px solid rgb(74, 51, 29);
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.white{
+    height: 70px;
+    width: 70px;
+    border-radius: 60%;
+    border: 3px solid rgb(74, 51, 29);
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+/* zona de pecas fora do tabuleiro*/
+/* preto */
+.blackstack {
+    display: flex;
+    flex-direction: row; /* Para formatar como fila (horizontal) */
+    height: 50px;
+    width: 345px;
+    border: 3px solid rgb(102, 78, 55);
+    border-radius: 20px;
+    margin-bottom: 4px;
+    margin-top: -150px;
+    background-color: rgb(53, 34, 21);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.blackstack .black {
+    width: 54px; /* Largura das pecas brancas */
+    height: 50px; /* Altura das pecas brancas */
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(74, 51, 29); /* Borda preta ao redor das pecas */
+    margin-right: -28px; /* Espacamento entre as pecas */
+}
+
+/* branco */
+.whitestack{
+    display: flex;
+    flex-direction: row; /* Para formatar como fila (horizontal) */
+    height: 50px;
+    width: 345px;
+    border: 3px solid rgb(102, 78, 55);
+    border-radius: 20px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    background-color: rgb(53, 34, 21);
+    margin-right: 100px;
+    margin-left: 100px;
+    }
+
+.whitestack .white {
+    width: 54px; /* Largura das pecas brancas */
+    height: 50px; /* Altura das pecas brancas */
+    background-color: white;
+    border: 1px solid rgb(74, 51, 29);
+    margin-right: -28px; /* Espacamento entre as pecas */
+}
+
+.selectedFrom{
+    background-color: rgb(226, 19, 19);
+}
+
+.selectedTo{
+    background-color: rgb(211, 72, 72)
+}
+
+#jogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha horizontalmente o conteudo */
+    align-items: center; /* Centraliza verticalmente o conteudo */
+    height: 650px; /* Altura opcional para a div pai */
+    margin-top: 0;
+    width: 700px;
+    margin-bottom: 250px;
+}

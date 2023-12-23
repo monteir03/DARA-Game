@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dara</title>
+        
+        <!--Icon do site-->
+        <link rel="stylesheet" href="title_body.css" type="text/css"> <!--Necessario para chamar ficheiro dara.css-->
+        <link rel="stylesheet" href="left.css" type="text/css">
+        <link rel="stylesheet" href="game.css" type="text/css">
+        <link rel="stylesheet" href="containers.css" type="text/css">
+        <link rel="stylesheet" href="login.css" type="text/css">
+    
+    <body>
+        <!--ESQUERDA -->
+        <div class="container-esq">
+
+            <button class="regras">
+                Regras
+            </button>
+
+            <div class="regras_table">
+                <ul>
+                    <li>Tabuleiro: 6x5</li>
+                    <li>2 jogadores, cada um com 12 pecas</li>
+                    <li>Um jogador tem pecas pretas</li>
+                    <li>Um jogador tem pecas brancas</li>
+                    <li>24 pecas sempre visiveis</li>
+
+                    <li>Jogadores escolhem uma cor e decidem quem joga primeiro</li>
+                    <li>Inicio: tabuleiro vazio</li>
+                    <li>O jogo tem 2 fases:</li>
+                    <ul>
+                        <li>Fase 1 - Por as pecas (drop) </li>
+                        <li>Fase 2 - Mover as pecas (move)</li>
+                    </ul>
+                    <li>Sao consideradas em linha</li>
+                    <ul>
+                        <li>sequencias de 3 ou mais pecas contiguas</li>
+                        <li>na horizontal ou vertical (nao na diagonal)</li>
+                        <li>todas da mesma cor</li>
+                    </ul>
+             
+                    <li>Jogadores poem alternadamente uma peca sua numa casa livre</li>
+                    <li>Nao podem podem ser postas mais de 3 pecas em linha</li>
+                    <li>Podem existir 3 pecas em linha (mas nao e vantajoso)</li>
+
+                    <li>Cada jogador move alternadamente uma peca da sua cor</li>
+                    <li>Uma peca so pode ser movida para uma casa contigua</li>
+                    <li>Pecas movidas apenas na horizontal ou vertical (nao na diagonal)</li>
+                    <li>Uma linha de tamanho 3 permite capturar peca do adversario</li>
+                    <li>Neste caso, remove uma peca do adversario a sua escolha</li>
+                    <li>So uma peca e removida por jogada (mesmo sendo formadas varias linhas)</li>
+                    <li>Nao podem ser formadas linhas com mais de 3 pecas</li>
+                    <li>Uma peca nao pode retornar a posicao da jogada anterior</li>
+                    <li>So podera retornar a essa casa nas jogadas seguintes</li>
+                </ul>
+            </div>
+
+            <div class="Rank_table">
+                <ol>*__Ranking Table__*
+                    <div>_________________</div>
+                    <li> Mafalda Aires a Expert</li>
+                    <li> Gonçalo Monteiro o Poderoso</li>
+                    <li> Sergio Taquara o Cardoso</li>
+                    <li> NPC</li>
+
+                </ol>
+            </div>
+
+        </div>
+        
+        <!-- MEIO -->
+        <div class="container-meio">
+
+            <h1 class="title">Dara</h1>
+
+            <div id="jogo">
+                <div id="warning"></div>
+                <div class="whitestack"></div>
+                <div id="board"></div>
+                <div class="blackstack"></div>
+                <p id="info"></p>
+            </div>
+
+        </div>
+
+        <!-- DIREITA -->
+        <div class="container-dir" style="z-index:1;position:relative;">
+
+            <!-- login -->
+            <form id="myForm">
+
+                <input type="text" class="username" id="username" placeholder="username">
+                <input type="password" class="password" id="password" placeholder="password">
+       
+                <button type="button" id="login">Sign up</button>
+            </form>
+            <!-- <form id="registrationForm" class="input">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+        
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <br>
+        
+                <button type="button" id ="dar_login">Register</button>
+                <p id="info"></p>
+            </form> -->
+
+            <!-- defenições -->
+            <div>
+                <p class="instr-title">Tamanho do Tabuleiro</p>
+                <select size=1 name=size>
+                    <option>6 x 5</option>
+                    <option>6 x 6</option>
+                </select>
+
+                <br />
+
+                <p class="instr-title">Tipo de Jogo</p>
+                <label for="rangeInput" id="label1" class="instr">Computador</label>
+                <input type="range" id="rangeInput" name="rangeInput" min="0" max="1" step="1">
+                <label for="rangeInput" id="label2" class="instr">Outro Jogador</label>
+
+                <br />
+
+                <p class="instr-title">Primeiro a jogar</p>
+                <select size="1" name=size>
+                    <option>Pecas Brancas</option>
+                    <option>Pecas Pretas</option>
+                </select>
+
+                <br />
+
+                <p class="instr-title">Nivel da IA (Minimax)</p>
+                <select size="3" name="size">
+                    <option>Facil</option>
+                    <option>Medio</option>
+                    <option>Dificil</option>
+                </select>
+                
+            </div>
+
+            <!-- reset -->
+            <div>
+                <button id="offline">Jogar offline</button>
+                <button id="online" disabled>Jogar online</button>
+                <br />
+                <hr />
+                <br />
+                <button id="Desistir">Desistir do Jogo</button>
+                <br />
+                <button id="updateRanking">Atualizar Ranking</button>
+            </div>
+        </div>
+
+        <!--<img alt="dara" src="https://logos.textgiraffe.com/logos/logo-name/Dara-designstyle-colors-m.png" class="img">-->
+
+        <!--<script src="pedidos.js"></script>-->
+        <script src="game.js"></script>
+        <script src="left.js"></script>
+        <!--<script src="connection.js"></script>-->
+
+    </body>
+</html>
